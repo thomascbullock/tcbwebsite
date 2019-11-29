@@ -1,0 +1,29 @@
+{
+  "name": "tcbwebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-pages": "node ./build_scripts/builder.js",
+    "start": "concurrently --kill-others \"nodemon -e js,json,css,md -i build -x \\\"npm run build-pages\\\"\" \"live-server ./build\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomascbullock/tcbwebsite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thomascbullock/tcbwebsite/issues"
+  },
+  "homepage": "https://github.com/thomascbullock/tcbwebsite#readme",
+  "dependencies": {
+    "concurrently": "^5.0.0",
+    "fs-extra": "^8.1.0",
+    "jimp": "^0.9.3",
+    "live-server": "^1.2.1",
+    "markdown-it": "^10.0.0",
+    "markdown-it-attrs": "^3.0.1",
+    "nodemon": "^2.0.1"
+  }
+}
