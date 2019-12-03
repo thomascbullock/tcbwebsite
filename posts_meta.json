@@ -1,0 +1,14 @@
+{ "posts":
+    [{
+        "date": "2019-12-21 06:00:00",
+        "type": "long",
+        "title": "On Boris",
+        "file": "on-boris.md"
+    },
+  {
+      "date": "2019-11-30 17:46:00",
+      "type": "long",
+      "title": "New Long Post",
+      "file": "new-long-post.md"
+  }]
+}
