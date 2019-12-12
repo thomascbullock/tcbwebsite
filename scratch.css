@@ -102,3 +102,24 @@ blockquote {
   blockquote p {
     display: inline;
   }
+
+#footer nav {
+    display: block;  
+    padding: 3em 0;
+    text-align: center;
+    line-height: 2em;
+}
+
+#footer nav a {
+  border-radius: 25px;
+  border: 2px solid #222222;
+  padding: .25em 2em 0.25em 2em;
+  margin-right: 3px;
+  text-decoration: none;
+  color: #222222;
+}
+
+#footer nav :hover {
+   background-color: rgb(134, 122, 122);
+   color: #fff;
+}
