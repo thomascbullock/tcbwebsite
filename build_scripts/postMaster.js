@@ -1,5 +1,6 @@
 const fs = require('fs-extra');
 
+
 class Postmaster {
   constructor() {
     this.all = [];
@@ -20,10 +21,8 @@ class Postmaster {
   sort() {
     for (const postType of Object.entries(this)) {
       this[postType[0]].sort((post1, post2) => {
-          const d1 = new Date(post1.date);
-          console.log(d1);
-          const d2 = new Date(post2.date);
-          console.log(d2);
+          const d1 = new Date(post1.dateTime);
+          const d2 = new Date(post2.dateTime);
           return d2 - d1;
       });
     }
@@ -37,7 +36,6 @@ class Postmaster {
     });
     await Promise.all(postPromises);
     this.sort();
-    console.log(this);
   }
 }
 

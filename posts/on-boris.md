@@ -1,5 +1,3 @@
-# On Boris
-
 Crazy hair. Talks endless nonsense, most of it verifiably false. Alleged by many to have achieved his political objectives only by Russian interference. 
 
 Did the UK just elect a "British Trump"? 

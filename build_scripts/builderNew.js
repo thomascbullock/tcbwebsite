@@ -3,6 +3,7 @@ const fs = require('fs-extra');
 const path = require('path');
 const pageTemplate = require('./page_template');
 const Postmaster = require('./postMaster');
+const Page = require('./page_template_new');
 
 const pagesPath = './pages';
 const pagesMetaPath = './pages_meta';
@@ -74,5 +75,26 @@ function sortPostmaster() {
 */
 
 const postmaster = new Postmaster();
-postmaster.build(meta);
+postmaster.build(meta)
+.then(() =>{
+  let bodyBag = [];
+  for (i = 0; i < postmaster.all.length; i++){
+    bodyBag.push({
+      title: postmaster.all[i].title,
+      dateTime: postmaster.all[i].dateTime,
+      body: postmaster.all[i].body
+    });
+  }
+  const page = new Page({
+    title: 'All',
+    bodyBag: bodyBag,
+    footerPrevious: 'previous',
+    footerNext: 'next',
+    fileName: 'all',
+    fileDir: ''
+  });
+
+  page.savePage();
+
+});
 

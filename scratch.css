@@ -52,6 +52,7 @@ body {
 article {
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 10em;
 }
 
 article h1 {
@@ -74,7 +75,11 @@ article p {
     margin-bottom: 1em;
     margin-left: 0;
     margin-right: 0;
-    line-height: 1.5em;
+    line-height: 1.7em;
+}
+
+article p strong {
+    font-weight: bold;
 }
 
 .date-time {
@@ -83,6 +88,16 @@ article p {
 
 article time {
     color: grey;
+}
+
+article ul {
+    display: block;
+list-style-type: disc;
+margin-top: 1em;
+margin-bottom: 1 em;
+margin-left: 0;
+margin-right: 0;
+padding-left: 40px;
 }
 
 img {
