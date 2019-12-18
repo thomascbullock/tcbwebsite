@@ -19,6 +19,7 @@
   "homepage": "https://github.com/thomascbullock/tcbwebsite#readme",
   "dependencies": {
     "concurrently": "^5.0.0",
+    "express": "^4.17.1",
     "fs-extra": "^8.1.0",
     "jimp": "^0.9.3",
     "live-server": "^1.2.1",

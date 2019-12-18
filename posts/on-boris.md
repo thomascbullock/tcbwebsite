@@ -28,10 +28,10 @@ Is there a way out of all this? The left need to learn that people naturally lov
 
 ## But.
 
-I maintain that “British Trump” is unfair to Boris. A philanderer and a clown he may be, but no worse than that. It’s more like the UK found and elected a British Jeff Foxworthy (no doubt with a collection of "you might be a redcoat if…" jokes). 
+I maintain that "British Trump" is unfair to Boris. A philanderer and a clown he may be, but no worse than that. It's more like the UK found and elected a British Jeff Foxworthy (no doubt with a collection of "you might be a redcoat if..." jokes). 
 
 There's another reason I'm worried by Trump and not by Johnson. In the U.S., the executive branch sprawls across every public appointment such that the Senate spends most of its time approving the civil service. Trump has seen fit to fill the cabinet with wholly inadequate cronies, like the winner of an elementary school class election declaring his lardiest friend "the King of Lunchtime!" 
 
 But in the U.K., by the grace of the past, elected politicians hold all the great offices of state. So, for better or worse, Boris' pool of acolytes is limited to those whom voters have already endorsed. The one good thing he did while Mayor of London in the aughts was to establish under him a reasonably competent cadre of deputies, who were happy to keep the city lights on while their boss took all the credit. This same pattern seems likely to repeat itself, and so long as Team Johnson has the rudder while Alexander DePfeffle shouts nonsense from the deck, the U.K. will enter the 2020s with far less damage to its democratic institutions than the U.S. will. 
 
-If there’s a more British ending to a column than quiet, conflicted optimism, I’m not sure what it is. 
+If there's a more British ending to a column than quiet, conflicted optimism, I'm not sure what it is. 

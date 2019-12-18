@@ -1,6 +1,10 @@
 /* eslint-disable no-restricted-syntax */
 const fs = require('fs-extra');
 const path = require('path');
+const express = require('express');
+
+const app = express();
+const port = 3000;
 const pageTemplate = require('./page_template');
 const Postmaster = require('./postMaster');
 const Page = require('./page_template_new');
@@ -74,27 +78,91 @@ function sortPostmaster() {
 
 */
 
+// remove previous build
+
+for (const file of fs.readdirSync(outputPath)) {
+  fs.removeSync(path.join(outputPath, file));
+}
+
+// move the css and image files straight across
+
+
+class Website {
+  async setup() {
+    await fs.ensureDir(outputPath);
+    for (const file of fs.readdirSync(outputPath)) {
+      await fs.remove(path.join(outputPath, file));
+    }
+    await fs.ensureDir(path.join(outputPath, 'css'));
+    await fs.ensureDir(path.join(outputPath, 'img'));
+    await fs.ensureDir(path.join(outputPath, 'posts', 'long'));
+    await fs.ensureDir(path.join(outputPath, 'posts', 'all'));
+    await fs.ensureDir(path.join(outputPath, 'posts', 'photo'));
+    await fs.ensureDir(path.join(outputPath, 'posts', 'short'));
+
+    await fs.copyFile('reset.css', path.join(outputPath, 'css', 'reset.css'));
+    await fs.copyFile('style.css', path.join(outputPath, 'css', 'style.css'));
+    for (const imgFile of fs.readdirSync('img')) {
+      await fs.copyFile(path.join('img',imgFile), path.join(outputPath, 'img', imgFile));
+    }
+  }
+
+
+}
+
+const website = new Website();
+website.setup();
+
 const postmaster = new Postmaster();
 postmaster.build(meta)
-.then(() =>{
-  let bodyBag = [];
-  for (i = 0; i < postmaster.all.length; i++){
-    bodyBag.push({
-      title: postmaster.all[i].title,
-      dateTime: postmaster.all[i].dateTime,
-      body: postmaster.all[i].body
+  .then(() => {
+    const bodyBag = [];
+    let i;
+    for (i = 0; i < postmaster.all.length; i++) {
+      let footerPrevious;
+      let footerNext;
+      // write the indivdual Page
+      const singleBodyBag = [{
+        title: postmaster.all[i].title,
+        dateTime: postmaster.all[i].dateTime,
+        body: postmaster.all[i].body,
+      }];
+      if (i === 0) {
+        footerPrevious = `${postmaster.all[i].file.split('.')[0]}.html`;
+        footerNext = `${postmaster.all[i + 1].file.split('.')[0]}.html`;
+      } else if (i > 0 && i < postmaster.all.length - 1) {
+        footerPrevious = `${postmaster.all[i - 1].file.split('.')[0]}.html`;
+        footerNext = `${postmaster.all[i + 1].file.split('.')[0]}.html`;
+      } else {
+        footerPrevious = `${postmaster.all[i - 1].file.split('.')[0]}.html`;
+        footerNext = `${postmaster.all[i].file.split('.')[0]}.html`;
+      }
+
+      const singlePage = new Page({
+        title: postmaster.all[i].title,
+        bodyBag: singleBodyBag,
+        footerPrevious,
+        footerNext,
+        fileName: postmaster.all[i].file.split('.')[0],
+        fileDir: path.join(outputPath, 'posts'),
+      });
+      singlePage.savePage();
+      bodyBag.push({
+        title: postmaster.all[i].title,
+        dateTime: postmaster.all[i].dateTime,
+        body: postmaster.all[i].body,
+      });
+    }
+    const allPage = new Page({
+      title: 'All',
+      bodyBag,
+      footerPrevious: 'previous',
+      footerNext: 'next',
+      fileName: 'all',
+      fileDir: 'posts/all',
     });
-  }
-  const page = new Page({
-    title: 'All',
-    bodyBag: bodyBag,
-    footerPrevious: 'previous',
-    footerNext: 'next',
-    fileName: 'all',
-    fileDir: ''
+
+    allPage.savePage();
+    app.use(express.static('./build'));
+    app.listen(port);
   });
-
-  page.savePage();
-
-});
-

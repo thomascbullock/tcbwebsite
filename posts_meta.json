@@ -1,6 +1,6 @@
 { "posts":
     [{
-        "dateTime": "2019-12-21 06:00:00",
+        "dateTime": "2019-07-23 06:00:00",
         "type": "long",
         "title": "On Boris",
         "file": "on-boris.md"
@@ -52,5 +52,101 @@
     "type": "long",
     "title": "On Blue Lake and Beyond",
     "file": "on-blue-lake-and-beyond.md"
+},
+{
+    "dateTime": "2017-04-28 17:46:00",
+    "type": "long",
+    "title": "On Your Left!",
+    "file": "on-your-left!.md"
+},
+{
+    "dateTime": "2017-01-01 17:46:00",
+    "type": "long",
+    "title": "On 2016",
+    "file": "on-2016.md"
+},
+{
+    "dateTime": "2016-01-01 17:46:00",
+    "type": "long",
+    "title": "On 2015",
+    "file": "on-2015.md"
+},
+{
+    "dateTime": "2016-09-26 17:46:00",
+    "type": "long",
+    "title": "On Economics",
+    "file": "on-economics.md"
+},
+{
+    "dateTime": "2015-09-26 17:46:00",
+    "type": "long",
+    "title": "On Keeping Things On The Table",
+    "file": "on-keeping-things-on-the-table.md"
+},
+{
+    "dateTime": "2015-03-29 17:46:00",
+    "type": "long",
+    "title": "On That Speech From That Guy",
+    "file": "on-that-speech-from-that-guy.md"
+},
+{
+    "dateTime": "2014-08-07 17:46:00",
+    "type": "long",
+    "title": "Tonight's Top Story",
+    "file": "tonights-top-story.md"
+},
+{
+    "dateTime": "2014-06-28 17:46:00",
+    "type": "long",
+    "title": "A Hasty, Ill Conceived Response To The Collegian",
+    "file": "a-hasty-ill-conceived-response-to-the-collegian.md"
+},
+{
+    "dateTime": "2014-01-02 17:46:00",
+    "type": "long",
+    "title": "The Year Not Reviewed",
+    "file": "the-year-not-reviewed.md"
+},
+{
+    "dateTime": "2013-11-27 17:46:00",
+    "type": "long",
+    "title": "On Socialism and Smoking Bans",
+    "file": "on-socialism-and-smoking-bans.md"
+},
+{
+    "dateTime": "2013-04-21 17:46:00",
+    "type": "long",
+    "title": "A Doorstep Debate",
+    "file": "a-doorstep-debate.md"
+},
+{
+    "dateTime": "2013-03-11 17:46:00",
+    "type": "long",
+    "title": "On Family Photos, Song Lyrics, and Group Projects",
+    "file": "on-family-photos-song-lyrics-and-group-projects.md"
+},
+{
+    "dateTime": "2013-01-27 17:46:00",
+    "type": "long",
+    "title": "On Booze",
+    "file": "on-booze.md"
+},
+{
+    "dateTime": "2012-09-02 17:46:00",
+    "type": "long",
+    "title": "On The Fear of Becoming The Rolling Stones",
+    "file": "on-the-fear-of-becoming-the-rolling-stones.md"
+},
+{
+    "dateTime": "2010-08-29 17:46:00",
+    "type": "long",
+    "title": "An Unnecessarily Detailed Account of an Awkward Moment",
+    "file": "an-unnecessarily-detailed-account-of-an-awkward-moment.md"
+},
+{
+    "dateTime": "2019-12-14 17:46:00",
+    "type": "photo",
+    "title": "Winter in Ault",
+    "file": "winter-in-ault.md"
 }]
 }
