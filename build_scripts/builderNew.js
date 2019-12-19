@@ -14,7 +14,8 @@ const pagesMetaPath = './pages_meta';
 const copyFolders = ['./images', './css', './js'];
 const outputPath = './build';
 const meta = require('../posts_meta.json');
-const pageTypes = ['long','short','photo','all'];
+
+const pageTypes = ['long', 'short', 'photo', 'all'];
 
 /*
 // clean the existing dirs
@@ -88,9 +89,10 @@ for (const file of fs.readdirSync(outputPath)) {
 
 
 class Website {
-  constructor(){
+  constructor() {
     this.postmaster = new Postmaster();
   }
+
   async setup() {
     await fs.ensureDir(outputPath);
     for (const file of fs.readdirSync(outputPath)) {
@@ -106,13 +108,12 @@ class Website {
     await fs.copyFile('reset.css', path.join(outputPath, 'css', 'reset.css'));
     await fs.copyFile('style.css', path.join(outputPath, 'css', 'style.css'));
     for (const imgFile of fs.readdirSync('img')) {
-      await fs.copyFile(path.join('img',imgFile), path.join(outputPath, 'img', imgFile));
+      await fs.copyFile(path.join('img', imgFile), path.join(outputPath, 'img', imgFile));
     }
     await this.postmaster.build(meta);
   }
 
-  async buildSinglePages(){
-    const bodyBag = [];
+  async buildSinglePages() {
     let i;
     for (i = 0; i < this.postmaster.all.length; i++) {
       let footerPrevious;
@@ -146,66 +147,64 @@ class Website {
     }
   }
 
-  async buildMultiPages(){
+  async buildMultiPages() {
     for (let pageTypeCounter = 0; pageTypeCounter < pageTypes.length; pageTypeCounter++) {
       const postType = pageTypes[pageTypeCounter];
       let bodyBag = [];
       let pagesCounter = 0;
       let postsCounter = 0;
-      
+
       if (this.postmaster[postType]) {
-      for (let totalPostCounter = 0; totalPostCounter < this.postmaster[postType].length; totalPostCounter++) {
+        for (let totalPostCounter = 0; totalPostCounter < this.postmaster[postType].length; totalPostCounter++) {
           bodyBag.push({
             title: this.postmaster[postType][totalPostCounter].title,
             dateTime: this.postmaster[postType][totalPostCounter].dateTime,
             body: this.postmaster[postType][totalPostCounter].body,
           });
 
-        if (postsCounter === 10 || totalPostCounter + 1 === this.postmaster[postType].length) {
+          if (postsCounter === 10 || totalPostCounter + 1 === this.postmaster[postType].length) {
+            let footerNext;
+            let footerPrevious;
+            let fileName;
 
-        let footerNext;
-        let footerPrevious;
-        let fileName;
-
-        if (pagesCounter === 0) {
-          footerPrevious = `/posts/${postType}/${pagesCounter + 1}`;
-          footerNext = `/posts/${postType}/${postType}`;
-          fileName = `${postType}`;
-        } else if (pagesCounter > 0 && pagesCounter < (this.postmaster[postType].length / 10)) {
-          footerPrevious = `/posts/${postType}/${pagesCounter + 1}`;
-          footerNext = `/posts/${postType}/${pagesCounter - 1}`;
-          fileName = `${pagesCounter}`;
-        } else {
-          footerPrevious = `/posts/${postType}/${pagesCounter}`;
-          footerNext = `/posts/${postType}/${pagesCounter - 1}`;
-          fileName = `${pagesCounter}`;
-        }
-        const pageOfPosts = new Page({
-          title: 'T',
-          bodyBag,
-          footerPrevious,
-          footerNext,
-          fileName,
-          fileDir: path.join(outputPath, 'posts', postType)
-        });
-        console.log(pageOfPosts);
-        await pageOfPosts.savePage();
-        postsCounter = 0;
-        pagesCounter++;
-        bodyBag = [];
-        } else {
-          postsCounter++;
+            if (pagesCounter === 0) {
+              footerPrevious = `/posts/${postType}/${pagesCounter + 1}.html`;
+              footerNext = `/posts/${postType}/${postType}.html`;
+              fileName = `${postType}`;
+            } else if (pagesCounter > 0 && pagesCounter < (this.postmaster[postType].length / 10)) {
+              footerPrevious = `/posts/${postType}/${pagesCounter + 1}.html`;
+              footerNext = `/posts/${postType}/${pagesCounter - 1}.html`;
+              fileName = `${pagesCounter}`;
+            } else {
+              footerPrevious = `/posts/${postType}/${pagesCounter}.html`;
+              footerNext = `/posts/${postType}/${pagesCounter - 1}.html`;
+              fileName = `${pagesCounter}`;
+            }
+            const pageOfPosts = new Page({
+              title: 'T',
+              bodyBag,
+              footerPrevious,
+              footerNext,
+              fileName,
+              fileDir: path.join(outputPath, 'posts', postType),
+            });
+            await pageOfPosts.savePage();
+            postsCounter = 0;
+            pagesCounter++;
+            bodyBag = [];
+          } else {
+            postsCounter++;
+          }
         }
       }
-
-     } }
+    }
   }
 
-  async orchestrate(){
+  async orchestrate() {
     await website.setup();
     await website.buildSinglePages();
     await website.buildMultiPages();
-    app.use(express.static('./build'));
+    app.use(express.static('./build', { extensions: ['html'] }));
     app.listen(port);
   }
 }

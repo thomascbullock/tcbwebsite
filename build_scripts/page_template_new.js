@@ -44,7 +44,7 @@ class Page {
 
   async savePage() {
     await fs.ensureDir(this.fileDir);
-    await fs.writeFile(path.join(this.fileDir, this.fileName), this.makePage());
+    await fs.writeFile(path.join(this.fileDir, `${this.fileName}.html`), this.makePage());
   }
 
   bodyBuilder() {
