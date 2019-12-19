@@ -18,13 +18,13 @@ class Page {
         <html>
             <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <link rel="stylesheet" href="css/reset.css" />
-                <link rel="stylesheet" href="css/style.css" />
+                <link rel="stylesheet" href="/css/reset.css" />
+                <link rel="stylesheet" href="/css/style.css" />
                 <title>${this.title}</title>
             </head>
             <body>
                 <header id="heading">
-                        <h1><a href="/"><img src="./img/logo.jpg"></a></h1>
+                        <h1><a href="/"><img src="/img/logo.jpg"></a></h1>
                     <nav>
                         <a href="/long">Long</a>
                         <a href="/short">Short</a>
@@ -33,9 +33,9 @@ class Page {
                     </nav>
                 </header>${this.bodyBuilder()}    <footer id="footer">
                 <nav>
-                    <a href="/${this.footerPrevious}">Previous</a>
+                    <a href="${this.footerPrevious}">Previous</a>
                     <a href="/archive">Archive</a>
-                    <a href="/${this.footerNext}">Next</a>
+                    <a href="${this.footerNext}">Next</a>
                 </nav>
             </footer>    
             </body>
@@ -44,7 +44,7 @@ class Page {
 
   async savePage() {
     await fs.ensureDir(this.fileDir);
-    await fs.writeFile(path.join(this.fileDir, `${this.fileName}.html`), this.makePage());
+    await fs.writeFile(path.join(this.fileDir, this.fileName), this.makePage());
   }
 
   bodyBuilder() {
