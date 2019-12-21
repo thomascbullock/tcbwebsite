@@ -2,16 +2,15 @@
 const fs = require('fs-extra');
 const path = require('path');
 const express = require('express');
+const Rss = require('rss');
+const moment = require('moment');
+const uuid = require('uuid/v1');
 
 const app = express();
 const port = 3000;
-const pageTemplate = require('./page_template');
 const Postmaster = require('./postMaster');
 const Page = require('./page_template_new');
 
-const pagesPath = './pages';
-const pagesMetaPath = './pages_meta';
-const copyFolders = ['./images', './css', './js'];
 const outputPath = './build';
 const meta = require('../posts_meta.json');
 
@@ -104,6 +103,7 @@ class Website {
     await fs.ensureDir(path.join(outputPath, 'posts', 'all'));
     await fs.ensureDir(path.join(outputPath, 'posts', 'photo'));
     await fs.ensureDir(path.join(outputPath, 'posts', 'short'));
+    await fs.ensureDir(path.join(outputPath, 'rss'));
 
     await fs.copyFile('reset.css', path.join(outputPath, 'css', 'reset.css'));
     await fs.copyFile('style.css', path.join(outputPath, 'css', 'style.css'));
@@ -147,13 +147,20 @@ class Website {
   }
 
   async buildMultiPages() {
+    let archive = '';
     for (let pageTypeCounter = 0; pageTypeCounter < pageTypes.length; pageTypeCounter++) {
       const postType = pageTypes[pageTypeCounter];
       let bodyBag = [];
       let pagesCounter = 0;
       let postsCounter = 0;
-
+      
+      const feed = new Rss({
+        title: postType,
+        feed_url: `http://thomascbullock.com/rss/rss-${postType}.xml`,
+        site_url: 'http://thomascbullock.com',
+      });
       if (this.postmaster[postType]) {
+
         for (let totalPostCounter = 0; totalPostCounter < this.postmaster[postType].length; totalPostCounter++) {
           bodyBag.push({
             title: this.postmaster[postType][totalPostCounter].title,
@@ -161,6 +168,16 @@ class Website {
             body: this.postmaster[postType][totalPostCounter].body,
             href: `/posts/${this.postmaster[postType][totalPostCounter].file.split('.')[0]}`,
           });
+          feed.item({
+            title: this.postmaster[postType][totalPostCounter].title,
+            description: this.postmaster[postType][totalPostCounter].title,
+            url: `http://thomascbullock.com/posts/${this.postmaster[postType][totalPostCounter].file.split('.')[0]}`,
+            guid: uuid(),
+          });
+
+          if (postType === 'all' && this.postmaster[postType][totalPostCounter].type !== 'short') {
+            archive = archive + `${moment(this.postmaster[postType][totalPostCounter].dateTime).format('MMMM Do YYYY')}: [${this.postmaster[postType][totalPostCounter].title}](/posts/${this.postmaster[postType][totalPostCounter].file.split('.')[0]})\n\n`;
+          }
 
           if (postsCounter === 10 || totalPostCounter + 1 === this.postmaster[postType].length) {
             let footerNext;
@@ -199,13 +216,50 @@ class Website {
           }
         }
       }
+      await fs.writeFile(path.join(outputPath, 'rss',`rss-${postType}.xml`),feed.xml({indent: true}));
     }
+    const archiveBag = [{
+      title: 'Archive',
+            dateTime: Date.now(),
+            body: archive,
+            href: `/posts/archive`,
+    }];
+    const archivePage = new Page({
+      title: 'Archive',
+      bodyBag: archiveBag,
+      fileName: 'archive',
+      fileDir: path.join(outputPath,'posts')
+    });
+    await archivePage.savePage();
+  }
+
+    async buildAboutPage(){
+
+      const aboutBody = await fs.readFile(`./posts/about.md`);
+
+      const aboutBodyBag = [{
+        title: 'About',
+        dateTime: Date.now(),
+        body: aboutBody.toString(),
+        href: '/posts/about',
+      }];
+   
+      const aboutPage = new Page({
+        title: 'About',
+        bodyBag: aboutBodyBag,
+        fileName: 'about',
+        fileDir: path.join(outputPath, 'posts'),
+      });
+
+      await aboutPage.savePage();
+
   }
 
   async orchestrate() {
     await website.setup();
     await website.buildSinglePages();
     await website.buildMultiPages();
+    await website.buildAboutPage();
     app.use(express.static('./build', { extensions: ['html'], index: 'posts/all/all.html' }));
     app.listen(port);
   }

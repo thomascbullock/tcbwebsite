@@ -20,6 +20,7 @@ class Page {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <link rel="stylesheet" href="/css/reset.css" />
                 <link rel="stylesheet" href="/css/style.css" />
+                <link rel="shortcut icon" href="/img/logo.jpg" />
                 <title>${this.title}</title>
             </head>
             <body>
@@ -31,13 +32,15 @@ class Page {
                         <a href="/posts/photo/photo">Photo</a>
                         <a href="/posts/about">About</a>
                     </nav>
-                </header>${this.bodyBuilder()}    <footer id="footer">
+                </header>${this.bodyBuilder()}
+                
+                <footer id="footer">
                 <nav>`;
     if (this.footerPrevious) {
       pageRendered = `${pageRendered}<a href="${this.footerPrevious}">Previous</a>`;
     }
 
-    pageRendered = `${pageRendered}<a href="/archive">Archive</a>`;
+    pageRendered = `${pageRendered}<a href="/posts/archive">Archive</a>`;
 
     if (this.footerNext) {
       pageRendered = `${pageRendered}<a href="${this.footerNext}">Next</a>`;
@@ -62,7 +65,8 @@ class Page {
     for (let bodyCount = 0; bodyCount < this.bodyBag.length; bodyCount++) {
       const readableDate = new moment(this.bodyBag[bodyCount].dateTime).format('MMMM Do YYYY');
       const singleBody = `<article><h1><a href=${this.bodyBag[bodyCount].href}>${this.bodyBag[bodyCount].title}</a></h1><p class="date-time">
-            <time datetime="${this.bodyBag[bodyCount].dateTime}" pubdate="pubdate">${readableDate}</time></p>${md.render(this.bodyBag[bodyCount].body)}</article>`;
+            <time datetime="${this.bodyBag[bodyCount].dateTime}" pubdate="pubdate">${readableDate}</time></p>${md.render(this.bodyBag[bodyCount].body)}
+            </article>`;
       body += singleBody;
     }
     return body;

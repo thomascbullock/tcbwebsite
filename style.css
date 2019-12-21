@@ -52,7 +52,11 @@ body {
 article {
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10em;
+    margin-bottom: 5em;
+}
+
+article a {
+    color: #222222;
 }
 
 article h1 {
@@ -60,7 +64,10 @@ article h1 {
     font-weight: bold;
     text-align: center;
     padding: .5em 0;
-   
+}
+
+article h1 a {
+    text-decoration-line: none;
 }
 
 article h2 {
@@ -124,7 +131,7 @@ blockquote {
 
 #footer nav {
     display: block;  
-    padding: 3em 0;
+    padding: 2em 0;
     text-align: center;
     line-height: 2em;
 }

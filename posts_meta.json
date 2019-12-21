@@ -148,5 +148,11 @@
     "type": "photo",
     "title": "Winter in Ault",
     "file": "winter-in-ault.md"
-}]
+},
+{
+    "dateTime": "2019-12-21 13:18:00",
+    "type": "short",
+    "title": "",
+    "file": "test-short-post.md"
+}  ]
 }
