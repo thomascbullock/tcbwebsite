@@ -14,7 +14,7 @@ class Page {
   }
 
   makePage() {
-    return `<!DOCTYPE html>
+    let pageRendered = `<!DOCTYPE html>
         <html>
             <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,20 +26,30 @@ class Page {
                 <header id="heading">
                         <h1><a href="/"><img src="/img/logo.jpg"></a></h1>
                     <nav>
-                        <a href="/long">Long</a>
-                        <a href="/short">Short</a>
-                        <a href="/photo">Photo</a>
-                        <a href="/about">About</a>
+                        <a href="/posts/long/long">Long</a>
+                        <a href="/posts/short/short">Short</a>
+                        <a href="/posts/photo/photo">Photo</a>
+                        <a href="/posts/about">About</a>
                     </nav>
                 </header>${this.bodyBuilder()}    <footer id="footer">
-                <nav>
-                    <a href="${this.footerPrevious}">Previous</a>
-                    <a href="/archive">Archive</a>
-                    <a href="${this.footerNext}">Next</a>
+                <nav>`;
+    if (this.footerPrevious) {
+      pageRendered = `${pageRendered}<a href="${this.footerPrevious}">Previous</a>`;
+    }
+
+    pageRendered = `${pageRendered}<a href="/archive">Archive</a>`;
+
+    if (this.footerNext) {
+      pageRendered = `${pageRendered}<a href="${this.footerNext}">Next</a>`;
+    }
+
+    pageRendered = `${pageRendered}
                 </nav>
             </footer>    
             </body>
         </html>`;
+
+    return pageRendered;
   }
 
   async savePage() {
@@ -51,7 +61,7 @@ class Page {
     let body = '';
     for (let bodyCount = 0; bodyCount < this.bodyBag.length; bodyCount++) {
       const readableDate = new moment(this.bodyBag[bodyCount].dateTime).format('MMMM Do YYYY');
-      const singleBody = `<article><h1>${this.bodyBag[bodyCount].title}</h1><p class="date-time">
+      const singleBody = `<article><h1><a href=${this.bodyBag[bodyCount].href}>${this.bodyBag[bodyCount].title}</a></h1><p class="date-time">
             <time datetime="${this.bodyBag[bodyCount].dateTime}" pubdate="pubdate">${readableDate}</time></p>${md.render(this.bodyBag[bodyCount].body)}</article>`;
       body += singleBody;
     }

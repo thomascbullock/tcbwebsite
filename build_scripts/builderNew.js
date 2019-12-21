@@ -123,16 +123,15 @@ class Website {
         title: this.postmaster.all[i].title,
         dateTime: this.postmaster.all[i].dateTime,
         body: this.postmaster.all[i].body,
+        href: `/posts/${this.postmaster.all[i].file.split('.')[0]}`,
       }];
       if (i === 0) {
-        footerPrevious = `${this.postmaster.all[i].file.split('.')[0]}.html`;
         footerNext = `${this.postmaster.all[i + 1].file.split('.')[0]}.html`;
       } else if (i > 0 && i < this.postmaster.all.length - 1) {
         footerPrevious = `${this.postmaster.all[i - 1].file.split('.')[0]}.html`;
         footerNext = `${this.postmaster.all[i + 1].file.split('.')[0]}.html`;
       } else {
         footerPrevious = `${this.postmaster.all[i - 1].file.split('.')[0]}.html`;
-        footerNext = `${this.postmaster.all[i].file.split('.')[0]}.html`;
       }
 
       const singlePage = new Page({
@@ -160,6 +159,7 @@ class Website {
             title: this.postmaster[postType][totalPostCounter].title,
             dateTime: this.postmaster[postType][totalPostCounter].dateTime,
             body: this.postmaster[postType][totalPostCounter].body,
+            href: `/posts/${this.postmaster[postType][totalPostCounter].file.split('.')[0]}`,
           });
 
           if (postsCounter === 10 || totalPostCounter + 1 === this.postmaster[postType].length) {
@@ -169,14 +169,16 @@ class Website {
 
             if (pagesCounter === 0) {
               footerPrevious = `/posts/${postType}/${pagesCounter + 1}.html`;
-              footerNext = `/posts/${postType}/${postType}.html`;
               fileName = `${postType}`;
-            } else if (pagesCounter > 0 && pagesCounter < (this.postmaster[postType].length / 10)) {
+            } else if (pagesCounter === 1) {
+              footerPrevious = `/posts/${postType}/${pagesCounter + 1}.html`;
+              footerNext = `/posts/${postType}/${postType}.html`;
+              fileName = `${pagesCounter}`;
+            } else if (pagesCounter > 1 && pagesCounter < (this.postmaster[postType].length / 10)) {
               footerPrevious = `/posts/${postType}/${pagesCounter + 1}.html`;
               footerNext = `/posts/${postType}/${pagesCounter - 1}.html`;
               fileName = `${pagesCounter}`;
             } else {
-              footerPrevious = `/posts/${postType}/${pagesCounter}.html`;
               footerNext = `/posts/${postType}/${pagesCounter - 1}.html`;
               fileName = `${pagesCounter}`;
             }
@@ -204,7 +206,7 @@ class Website {
     await website.setup();
     await website.buildSinglePages();
     await website.buildMultiPages();
-    app.use(express.static('./build', { extensions: ['html'] }));
+    app.use(express.static('./build', { extensions: ['html'], index: 'posts/all/all.html' }));
     app.listen(port);
   }
 }
