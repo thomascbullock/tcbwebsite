@@ -20,4 +20,4 @@ I didn't turn around immediately. On some level, the danger of being an unusuall
 
 The end of the line (today).
 
-[bl]: /img/bluelake.jpg
+[bl]: /img/blueLake.jpg
