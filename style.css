@@ -151,4 +151,31 @@ blockquote {
 /* 500-pixel layout for smaller screens */
 @media (max-width: 680px) {
     article { width: calc(100vw - 30px); }
+    #heading nav {
+        line-height: 2em;
+        font-size: .75em;
+    }
+    
+    #footer nav {
+		font-size: .75em;
+    }
+}
+
+/* 500-pixel layout for smaller screens */
+@media (max-width: 570px) {
+    article { width: calc(100vw - 30px); }
+    article h1 {
+        font-size: 1em;
+    }
+    article p {
+        font-size: .75em;
+    }
+    #heading nav {
+        line-height: 2em;
+        font-size: .5em;
+    }
+    
+        #footer nav {
+		font-size: .5em;
+    }
 }
