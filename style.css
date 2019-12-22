@@ -50,7 +50,7 @@ article {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5em;
-    width: 620px;
+    width: 1080px;
 }
 
 article a {
@@ -146,6 +146,19 @@ blockquote {
 #footer nav :hover {
    background-color: rgb(134, 122, 122);
    color: #fff;
+}
+
+/* 500-pixel layout for smaller screens */
+@media (max-width: 800px) {
+    article { width: calc(100vw - 30px); }
+    #heading nav {
+        line-height: 2em;
+        font-size: .75em;
+    }
+    
+    #footer nav {
+		font-size: .75em;
+    }
 }
 
 /* 500-pixel layout for smaller screens */
