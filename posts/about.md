@@ -1,6 +1,6 @@
-Hello. I'm Thom Bullock, I make this site. 
+Hello. I'm Thom Bullock, I make this site. Here is a picture of me. 
 
-Here is a picture of me and my Dad, he's on the left. 
+(And my dad. He's on the left.)
 
 ![me][me]
 
