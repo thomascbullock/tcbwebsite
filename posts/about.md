@@ -28,7 +28,7 @@ This site offers four kinds of RSS feeds:
 
 While "all" is probably the one most useful at the moment, I live in hope that someday feed readers aimed at short posts and photo posts (a la [micro.blog][mb]) will enable better ways of sharing our lives than the current morass. I should rewrite that sentence to be less pretentious.  
 
-[me]: /img/me.jpg
+[me]: /img/20190619-me-and-dad.jpg
 [rss]: https://en.wikipedia.org/wiki/RSS
 [tw]: https://www.twitter.com
 [fb]: https://www.facebook.com
