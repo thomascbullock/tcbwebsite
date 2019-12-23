@@ -1,1 +1,1 @@
-This is a test short post. I'm not sure what goes here yet. 
+There's a bug currently where if I don't have at least one post in each category, the site doesn't work. I like the idea of short tweet-sized posts, but there aren't any yet. Until this one. From the past. 
