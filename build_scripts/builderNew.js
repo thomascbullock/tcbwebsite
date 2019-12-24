@@ -4,7 +4,6 @@ const path = require('path');
 const express = require('express');
 const Rss = require('rss');
 const moment = require('moment');
-const uuid = require('uuid/v1');
 
 const app = express();
 const port = 3000;
@@ -172,7 +171,6 @@ class Website {
             title: this.postmaster[postType][totalPostCounter].title,
             description: this.postmaster[postType][totalPostCounter].title,
             url: `http://thomascbullock.com/posts/${this.postmaster[postType][totalPostCounter].file.split('.')[0]}`,
-            guid: uuid(),
           });
 
           if (postType === 'all' && this.postmaster[postType][totalPostCounter].type !== 'short') {
