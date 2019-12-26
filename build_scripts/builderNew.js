@@ -183,18 +183,20 @@ class Website {
             let fileName;
 
             if (pagesCounter === 0) {
-              footerPrevious = `/posts/${postType}/${pagesCounter + 1}.html`;
+              if (this.postmaster[postType].length > 10) {
+                footerPrevious = `/posts/${postType}/${pagesCounter + 1}`;
+              }
               fileName = `${postType}`;
             } else if (pagesCounter === 1) {
-              footerPrevious = `/posts/${postType}/${pagesCounter + 1}.html`;
-              footerNext = `/posts/${postType}/${postType}.html`;
+              footerPrevious = `/posts/${postType}/${pagesCounter + 1}`;
+              footerNext = `/posts/${postType}/${postType}`;
               fileName = `${pagesCounter}`;
             } else if (pagesCounter > 1 && pagesCounter < (this.postmaster[postType].length / 10)) {
-              footerPrevious = `/posts/${postType}/${pagesCounter + 1}.html`;
-              footerNext = `/posts/${postType}/${pagesCounter - 1}.html`;
+              footerPrevious = `/posts/${postType}/${pagesCounter + 1}`;
+              footerNext = `/posts/${postType}/${pagesCounter - 1}`;
               fileName = `${pagesCounter}`;
             } else {
-              footerNext = `/posts/${postType}/${pagesCounter - 1}.html`;
+              footerNext = `/posts/${postType}/${pagesCounter - 1}`;
               fileName = `${pagesCounter}`;
             }
             const pageOfPosts = new Page({
