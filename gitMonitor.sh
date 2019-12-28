@@ -7,5 +7,5 @@ GIT_RESULT="$(git pull)"
 
 if [ "$GIT_RESULT" != "$GIT_NO_RESULT" ]
 then
-    systemctl reload nodeapp
+    sudo systemctl reload nodeapp
 fi
