@@ -1,3 +1,10 @@
+---
+{
+    "dateTime": "2014-06-28",
+    "type": "long",
+    "title": "A Hasty Ill-Conceived Response To The Collegian"
+}
+---
 I'm not sure if Netflix has a "shuffle" button. They didn't the last time I used the service, but that was about a year ago, and paying for a month just for the purpose of the blog seemed like an extravagance. But imagine with me for a moment that you can, with one click, serve up a randomly selected movie from Netflix' vast catalog. Then imagine that you watch one third of it before turning it off and writing a review of the entire Netflix service based on this abbreviated, random experience. The results would not likely be worthy of a Peabody (or even a #ghostpee-body), but this was the strategy employed by Collegian staff reporter Haleigh McGill to [review the Monday night Open-Mic Comedy at Hodi's Half Note][hn].
 
 Fortunately for all of us, the 45 minutes that McGill endured included the excellent Richard Kennedy, who was rightly featured in the article. The character Richard slips into on stage is not only the perfect vehicle for his great lines but also some great crowd work, and he regularly accomplishes the difficult task of making an audience laugh at something against their will. I'm glad the writer liked Richard, and he was certainly the highlight of the show up to the point McGill and her collection of friends (whom I suspect included disappointed "interviewee" Brittany Carpenter) made their exit, but I'd like to suggest for a moment that maybe Haleigh missed the point.

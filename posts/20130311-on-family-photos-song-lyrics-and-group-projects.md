@@ -1,3 +1,10 @@
+---
+{
+    "dateTime": "2013-03-11",
+    "type": "long",
+    "title": "On Family Photos, Song Lyrics, and Group Projects"
+}
+---
 _I sometimes ask comedy audiences "Who thinks life would be better if we could all do whatever we wanted, without anyone interfering?" There's usually a bit of applause, and then I'll explain I disagree completely,  and spend a few minutes exploring the ways in which we're all broken, evil, and can't be trusted. Here's a few words along that same theme._
 
 ---

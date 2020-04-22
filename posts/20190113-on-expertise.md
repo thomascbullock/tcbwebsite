@@ -1,3 +1,10 @@
+---
+{
+    "dateTime": "2019-01-13",
+    "type": "long",
+    "title": "On Expertise"
+}
+---
 As this post talks about work a bit, I note here that this doesn't reflect the opinions of any past or present employers. Timelines are deliberately ambiguous, in the same way a comic will say "the other day" to signify some time between forever ago and never.
 
 > "When people say their processes can't be automated, it means they have data the rest of us don't have, but need to get."

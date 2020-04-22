@@ -1,7 +1,6 @@
 const moment = require('moment');
 const fs = require('fs-extra');
 const path = require('path');
-const md = require('markdown-it')();
 
 class Page {
   constructor(inPage) {
@@ -63,10 +62,13 @@ class Page {
   bodyBuilder() {
     let body = '';
     for (let bodyCount = 0; bodyCount < this.bodyBag.length; bodyCount++) {
-      const readableDate = new moment(this.bodyBag[bodyCount].dateTime).format('MMMM Do YYYY');
-      const singleBody = `<article><h1><a href=${this.bodyBag[bodyCount].href}>${this.bodyBag[bodyCount].title}</a></h1><p class="date-time">
-            <time datetime="${this.bodyBag[bodyCount].dateTime}" pubdate="pubdate">${readableDate}</time></p>${md.render(this.bodyBag[bodyCount].body)}
-            </article>`;
+      let singleBody = `<article><h1><a href=${this.bodyBag[bodyCount].href}>${this.bodyBag[bodyCount].title}</a></h1>`;
+      if (!this.bodyBag[bodyCount].noDate) {
+        const readableDate = new moment(this.bodyBag[bodyCount].dateTime).format('MMMM Do YYYY');
+        singleBody = singleBody += `<p class="date-time">
+        <time datetime="${this.bodyBag[bodyCount].dateTime}" pubdate="pubdate">${readableDate}</time></p>`;
+      }
+      singleBody += `${this.bodyBag[bodyCount].body}</article>`;
       body += singleBody;
     }
     return body;

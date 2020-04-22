@@ -1,3 +1,10 @@
+---
+{
+    "dateTime": "2013-04-21",
+    "type": "long",
+    "title": "A Doorstep Debate"
+}
+---
 The following is a conversation I had with myself, standing outside a friend's house this weekend.
 
 "I'm half an hour late. That's ok, isn't it? People aren't on time to things. At least, I'm not on time to things. Am I always the last person to arrive at everything? That can't be, because I distinctly remember forming the opinion that it's basically fine to arrive after things start because someone else did that and it wasn't a problem. What if that was the only time they'd ever been late to anything? And I chose that moment to form a habit of being late to social events? Nothing happens in the first half hour of a social gathering anyway, perhaps some people will have taken their shoes off already. I reckon I'm pretty quick at that, so I'll be fine.

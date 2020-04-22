@@ -1,3 +1,10 @@
+---
+{
+    "dateTime": "2017-10-28",
+    "type": "long",
+    "title": "On Various Verts"
+}
+---
 "Likes good things, dislikes bad things. Not here for hookups despite my incredibly suggestive pictures. ESFP."
 
 So goes the majority of personal blurbs on any online dating service. If I were a different person entirely, this would be where I'd begin recounting a recent date, carefully disguising the identity of someone who didn't consent to be written about by changing a letter in their first name. It was nice to meet you, Lundsay. Alternately, this might be the beginning of one of those "hilarious" suggestions of a new name for such a service, along with descriptions of the types of people they might specifically try to attract. Alas, no. Instead, I'm hung up on those four letters at the end. 

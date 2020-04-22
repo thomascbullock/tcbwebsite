@@ -1,3 +1,10 @@
+---
+{
+    "dateTime": "2014-08-07",
+    "type": "long",
+    "title": "Tonight's Top Story"
+}
+---
 _Longer pieces never really go well for me on stage (the below is actually long for me...), so I've only attempted this once, but as the relevant news story has reared it's head again, I thought I'd post my notes in written form._
 
 The following is a dramatic reenactment of a recent news story.

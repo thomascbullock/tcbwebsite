@@ -1,3 +1,10 @@
+---
+{
+    "dateTime": "2015-09-26",
+    "type": "long",
+    "title": "On Keeping Things On The Table"
+}
+---
 My apartment is disappointing. I know this, because everyone who has ever been inside has remarked on one of its less savory elements, like the fact that I don't own any tables. Or curtains. Or the fact that the windows don't open. Or the leak in the ceiling.
 
 This was all news to me - I have remarkably little awareness of the parts of the world around me unrelated to the task at hand, which is why my shoes are always untied and I have to rely on external feedback about my breath. But now others have pointed out that my home is unlikely to attract someone to spend their life with its tenant, I have been moved from disinterest to incessant complaining. How lucky for my friends.

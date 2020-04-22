@@ -1,3 +1,10 @@
+---
+{
+    "dateTime": "2014-01-02",
+    "type": "long",
+    "title": "The Year Not Reviewed"
+}
+---
 _I don't write about faith much - this is the first time on this blog. Because it doesn't permeate my speech as much as it should, and because I know a lot of you in a context that doesn't naturally bring those conversations about, I worry that reading this will feel like a bit of a bait-and-switch. I don't have anything to offer to correct that, but I feel it important to acknowledge. I hope I'm always honest when the subject comes up, but there are situations where it doesn't, and that's ok. It would be ridiculous to say "here's how I think Jesus would have designed this piece of software", just as it would be to reference to God in my standup just to assuage my conscience._
 
 Social media is filled today with thoughts about the triumphs of 2013 and the possibilities of 2014. No doubt all of us had a year of highs and lows - but I find it difficult to write about the year because, sitting here tonight, the lows are louder. It's not that there weren't great moments - there were - but I can't think of those without also musing on the things that didn't go as well, and so the whole thing ends up pretty downcast. No one wants to read a comfortable middle class 25 year old feeling down about the things that annoy him (and for what it's worth, I'm not talking about anything in my life approaching a real problem, rather things that feel overwhelming regardless of how serious - though I believe this argument also stands for huge things like long term unemployment or the breakdown of a significant relationship).

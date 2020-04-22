@@ -1,3 +1,10 @@
+---
+{
+    "dateTime": "2012-09-02",
+    "type": "long",
+    "title": "On the Fear of Becoming the Rolling Stones"
+}
+---
 About a week. Or until a bad gig. Or the next time you try to write and end up with a paper with a dozen black dots from setting the pen down.
 
 That's how long the elation from success will last.

@@ -1,3 +1,10 @@
+---
+{
+    "dateTime": "2010-08-29",
+    "type": "long",
+    "title": "An Unnecessarily Detailed Account Of An Awkward Moment"
+}
+---
 I am unfortunately good at awkward moments. If you'd like to have the experience of getting along fairly well, and then suddenly something happens resulting in us not talking for months on end because it's just too weird - I'm your man. I don't know quite where this comes from, but like most of the personality quirks I'd like to get rid of, I'm guessing I picked it up from my father (don't read that as harshly as it sounds, he would tell you the same thing, and I've learned many good things from him too). But even my awkwardness was no match for a woman I met last weekend in Greenwood Village.
 
 A professor I had at CSU many moons ago told me that Greenwood Village was intentionally designed in a confusing way so as to discourage outsiders from ever returning - they certainly achieved their goals. Thirty seconds after entering, all hope of going back out the way I came in had been lost, and it only took another five minutes before the feeling that I was just going to have to give up and start a new life here had set in. I had come to this place to watch a Green Day concert, and because it had been a somewhat spontaneous decision, I had to come down a few hours early so that I wouldn't have to fight through the will call line and the admission line. Finding myself with 90 minutes to kill, and not having eaten anything so far that day, I thought I would take advantage of the Greenwood Village Plaza and find something to eat before the gig. Another twenty minutes of driving in circles ensued, and I finally found the area I was looking for, two blocks away from where I'd started.

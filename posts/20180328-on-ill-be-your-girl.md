@@ -1,3 +1,10 @@
+---
+{
+    "dateTime": "2018-03-28",
+    "type": "long",
+    "title": "On \"I'll Be Your Girl\""
+}
+---
 It started with the longest, happiest sigh. In early summer 2012, I returned to an empty apartment for the first time in two weeks, having had my dad and sister over for a vacation. The warm afterglow of fond memories together with the still peace of a house to myself made for an excellent mood. A friend of my sister's had suggested The Decemberists' [The Crane Wife][cw] as good driving music during our road trip, and we'd added the title track to whosever iPod was in charge. She was right, it was an excellent open road song, and I made a note to check out more of their stuff when we came home. I'd heard of the band, as 2011's [The King is Dead][kd] was a favorite among some friends, though I hadn't listened to it myself as that particular group of friends had a musical vocabulary completely foreign to me, and I felt it'd be easiest to remain ignorant rather than risk mispronouncing Bon Iver as "Sufjan Stevens." 
 
 And so, alone in my apartment with no risk of getting anything wrong, on that hot June evening in 2012, I investigated their latest release, and discovered it was a live album from the King is Dead tour. I was already excited about this, as I generally find live albums more enjoyable than their studio predecessors, and it provided a good way into their whole catalog. [We All Raise Our Voices to the Air][wr] made me an instant convert to The Decemberists, and to this day that album brings to mind dozens of sunny afternoons cycling along the Poudre river, as the horrifying story of The Rake's Song stealthily invaded my brain through a catchy guitar riff. 

@@ -1,3 +1,10 @@
+---
+{
+    "dateTime": "2017-06-29",
+    "type": "long",
+    "title": "On Fading West"
+}
+---
 To my surprise, I have something in common with Katy Perry (apart from the whole "kissing a girl and liking it" thing). In a [recent profile by the New York Times][nyt], they announced her current slogan as "i know nothing", uncapitalized in the name of authenticity. There's apparently something in the air - Miley Cyrus also recently [caught a bout of restraint][mc], having discovered self righteousness is as powerful a drug as any other on the market.
 
 But where was I? Ah yes, "i know nothing (sic)". I don't wish to have that printed on t-shirts or in my Twitter bio, but it does describe my frame of mind this week. Next Saturday, I'll leave Fort Collins and move to Seattle, to begin a new job with Amazon. Everyone's reaction when I mention this is to ask "are you excited?" And I have no idea. The main thing I am is baffled - when will they realize their mistake? When will Ashton Kutcher jump out and explain I've been Punk'd? There's no false modesty in this, incidentally - I'm not feeling unworthy, just really confused, as if I'd been told I've got a new job as the back of someone's neck. How did this happen?! i know nothing.

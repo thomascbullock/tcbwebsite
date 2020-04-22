@@ -1,3 +1,10 @@
+---
+{
+    "dateTime": "2015-03-29",
+    "type": "long",
+    "title": "On That Speech From That Guy"
+}
+---
 No hidden fees! No contract! No one forcing you to eat lawn clippings!
 
 Are you interested yet? Does it matter what I'm selling, when the terms are this good? Does it even matter if I know what I'm selling? Do you _want_ to be forced to eat lawn clippings? Those are the choices - my nebulous shadow of an idea, or everyone being forced to eat lawn clippings.

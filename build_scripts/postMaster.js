@@ -1,5 +1,5 @@
 const fs = require('fs-extra');
-
+const MetaBuilder = require('./posts_meta_builder');
 
 class Postmaster {
   constructor() {
@@ -8,14 +8,6 @@ class Postmaster {
     this.short = [];
     this.photo = [];
     this.link = [];
-  }
-
-  async add(inPostMeta) {
-    const postObject = inPostMeta;
-    const postBody = await fs.readFile(`./posts/${inPostMeta.file}`);
-    postObject.body = postBody.toString();
-    this.all.push(postObject);
-    this[inPostMeta.type].push(postObject);
   }
 
   sort() {
@@ -28,13 +20,15 @@ class Postmaster {
     }
   }
 
-  async build(inMeta) {
-    const meta = inMeta;
+  async build() {
+    const metaBuilder = new MetaBuilder('./posts');
+    const meta = await metaBuilder.build();
     const postPromises = [];
-    meta.posts.forEach((postMeta) => {
-      postPromises.push(this.add(postMeta));
+
+    meta.forEach((postData) => {
+      this.all.push(postData);
+      this[postData.type].push(postData);
     });
-    await Promise.all(postPromises);
     this.sort();
   }
 }

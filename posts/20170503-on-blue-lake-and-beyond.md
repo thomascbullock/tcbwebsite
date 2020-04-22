@@ -1,3 +1,10 @@
+---
+{
+    "dateTime": "2017-05-03",
+    "type": "long",
+    "title": "On Blue Lake"
+}
+---
 As soon as I got out of the car, I knew the day would go differently than I'd planned. I'd driven up to Blue Lake, a favorite hike of mine 4 miles west of Chambers Lake. Solo hiking is as close as I get to therapy - nothing so far in my life has led me to believe the presence of an expensive judgmental stranger will be useful in unwinding the week, but the sound of a river rushing down the canyon is a pretty reliable path to "calm." I'd spent an excellent morning up here on Labor Day, and was interested to experience the other end of the season. There's plenty of tree cover throughout, and most of the route is marked by blue arrows, pointlessly pointing out that the well trodden bit between the trees is the trail.
 
 Alas, "seasons" are differently defined at 9500 feet, compared to my idyllic foothills city - up there, the snow hasn't cleared by May 13th. Determined to make something of the day, I stumbled ahead, only occasionally ending up groin-deep in slush. For about a quarter mile, I was hopeful that it would get better as I got farther along - that the part under heavier shade from trees would have experienced more snow melt. I went to school in Ault. As with so many areas of life, my optimism remained undimmed until I'd gone far enough that turning around would have constituted significant effort - with the journey back to the car looking equally unpleasant, I conceded it would be a slow, soggy day.

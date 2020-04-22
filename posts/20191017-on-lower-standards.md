@@ -1,3 +1,10 @@
+---
+{
+    "dateTime": "2019-10-17",
+    "type": "long",
+    "title": "On Lower Standards"
+}
+---
 [Jeremy Corby on the new Brexit Deal][c]: 
 
 > These proposals risk triggering a race to the bottom on rights and protections: putting food safety at risk, cutting environmental standards and workers' rights, and opening up our NHS to a takeover by US private corporations. This sell out deal won't bring the country together and should be rejected. The best way to get Brexit sorted is to give the people the final say in a public vote.

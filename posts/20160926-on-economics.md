@@ -1,3 +1,10 @@
+---
+{
+    "dateTime": "2016-09-26",
+    "type": "long",
+    "title": "On Economics"
+}
+---
 [Woman Receives Sentence for Welfare Fraud][wf]
 
 [Entrepreneur Defends Price Increase of Daraprim Drug][dr]

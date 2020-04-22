@@ -1,3 +1,10 @@
+---
+{
+    "dateTime": "2010-04-28",
+    "type": "long",
+    "title": "On Your Left!"
+}
+---
 I yell that a few times a week at fellow Poudre Trail cyclists. Most often, both I and they are wearing headphones, so it's unclear what the point of this activity is. I suspect my feeling like I've done the right thing is what keeps me doing it, despite the lack of any actual evidence of it's usefulness. Traffic signaling meets virtue signaling. This is also why people buy greeting cards, in case you've ever wondered.
 
 "On your left" is also the way I've generally described my political leanings relative to my circle of friends. The roots of it are easy to identify - growing up in the UK in the 90s, the wave of enthusiasm which brought Tony Blair to power was palpable, even as a nine year old, and it was natural that I'd be interested. As a teenager in the mid 2000s, cocksure of my own understanding about the world like everyone of that age, the U.S. and U.K. governments were busy tearing apart the Middle East and giving massive tax cuts to big businesses. The narrative was easy to understand and had practically made it into the water supply - the American right was evil and the UK left had betrayed their principles. As the decade drew to a close, America had it's own euphoric "Tony Blair" moment, as the right (left) candidate for the moment arrived and was swept to victory. A couple of moments stick in my mind from November 2008:

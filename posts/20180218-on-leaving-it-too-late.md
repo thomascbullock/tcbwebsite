@@ -1,3 +1,10 @@
+---
+{
+    "dateTime": "2018-02-18",
+    "type": "long",
+    "title": "On Leaving It Too Late"
+}
+---
 In 2012, the leader of the Labour Party in Britain was reflecting on why they'd lost an election two years ago. In a speech about immigration policy, he made the following point:
 
 > Quite simply, we became too disconnected from the concerns of working people. We too easily assumed those who worried about immigration were stuck in the past. Unrealistic about how things could be different. Even prejudiced. But Britain was experiencing the largest peacetime migration in recent history. And people's concerns were genuine. Why didn't we listen more? At least by the end of our time in office, we were too dazzled by globalization and too sanguine about its price. By focusing too much on globalization and migration's impact on growth, we lost sight of who was benefiting from that growth - and the people who were being squeezed.

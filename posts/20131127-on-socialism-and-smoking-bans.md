@@ -1,3 +1,10 @@
+---
+{
+    "dateTime": "2013-04-21",
+    "type": "long",
+    "title": "On Socialism and Smoking Bans"
+}
+---
 It's time I lay my red cards on the table. I'm not retiring from the world of professional soccer refereeing, rather, I'd like to make an entirely unoriginal point about the free market. The notion that people will "vote with their dollars" as a way of regulating commerce assumes that:
 
 * We always make good overall decisions with our money
