@@ -16,7 +16,7 @@ There are a vocal group of people opposed to mandatory face coverings. As noted 
 
 It’s easy to see why many people are quick to be in favor of masking up. There’s a solid common sense argument - the virus is mainly spread by fluid emitted from nose/mouth traveling through the air, a mask would lower your emissions, so to speak. I think there’s an element of being seen to be doing something good, also; wearing a mask is a physical incarnation of sharing a post about a worthy cause. But there might just be reasons to be skeptical. I can think of two.
 
-__Evidence of their efficacy is scant.__
+__Evidence of Their Efficacy is Scant__
 
 There’s huge overconfidence on the part of the pro-mask community. Phrases like “Wearing Masks Saves Lives” are bandied about as though they were axiomatically true. But here’s the conclusion from [this piece](bmj) from the British Medical Journal arguing in favor of mass mask wearing:
 
@@ -32,7 +32,7 @@ It’s been 19 years, and all those restrictions are still with us. Why? Because
 
 All kinds of extraordinary powers - restrictions on assembly and much else besides - are being invoked in the name of Coronavirus. There’s been no democratic influence over this process, and this latest example is _government regulation about what you must wear when you leave the house_. I don’t think people are irrational to be unhappy about that.
 
-To people who don’t want to wear masks: consider being unhappy about it and wearing one anyway, because we might all get our society back sooner.
+To people who don’t want to wear masks: consider being unhappy about it and wearing one anyway, because you care about the feelings of those around you, and because we might all get our society back sooner.
 
 To people frustrated with those who don’t want to wear masks: consider that masks are a matter of opinion, and people with different opinions to yours aren’t automatically bad. If you find this unacceptable, [the TSA is hiring](tsa). 
 
